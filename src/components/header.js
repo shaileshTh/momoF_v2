@@ -1,11 +1,17 @@
+import React, {useContext} from "react"
 import { Link } from "gatsby"
+import Emoji from '../components/Emoji'
 import PropTypes from "prop-types"
-import React from "react"
+import {CartContext} from '../context/CartContext'
 
-const Header = ({ siteTitle }) => (
-  <header
+const Header = () => {
+
+  const {cart} = useContext(CartContext)
+  console.log("header", cart)
+  return(
+    <header
     style={{
-      background: `rebeccapurple`,
+      background: `#212529`,
       marginBottom: `1.45rem`,
     }}
   >
@@ -16,7 +22,7 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h2 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
@@ -24,12 +30,35 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+        <Emoji symbol="🥟" label="dumpling"/>
+        <span  style = {{fontSize:'25px'}}>
+        momoATL
+        </span></Link>
+        <Link
+          to="/cart"
+          style={{
+            color: `white`,
+            textDecoration: `none`,
+            float:'right'
+          }}
+        >
+        <span  style = {{fontSize:'25px'}}>Cart{' '}</span><Emoji symbol="🛒" label="cart"/>
+        {cart &&
+          <span style = {{marginLeft:'-10px', background:'white', color:'#212529', borderRadius:'50%', height:'28px', width:'28px', fontSize:'20px', display:'inline-block', textAlign:'center', verticalAlign:'middle'}}>
+            {' '}
+            {cart.reduce((counter, dish) => {
+              return counter + dish.quantity
+            }, 0)}
+            {' '}
+            </span>
+        }
         </Link>
-      </h1>
+      </h2>
     </div>
   </header>
-)
+  )
+}   
+
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
