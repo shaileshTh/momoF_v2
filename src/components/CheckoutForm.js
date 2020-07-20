@@ -6,6 +6,7 @@ import { CartContext } from '../context/CartContext';
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Alert from 'react-bootstrap/Alert'
+import {API_URL} from '../utils/url'
 
 const CARD_ELEMENT_OPTIONS = {
     style: {
@@ -93,7 +94,7 @@ export default () => {
         }
 
 
-        axios.post('http://localhost:1337/orders', data)
+        axios.post(`${API_URL}/orders`, data)
           .then(function (response) {
             setLoading(false)
             setDisplayId(response.data.payment_intent_id)
@@ -113,7 +114,7 @@ export default () => {
     useEffect(()=>{
         const loadToken = async () => {
             setLoading(true)
-            const response = await fetch('http://localhost:1337/orders/payment',{
+            const response = await fetch(`${API_URL}/orders/payment`,{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
