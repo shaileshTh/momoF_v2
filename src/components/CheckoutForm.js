@@ -221,19 +221,19 @@ export default () => {
 
                     <div style = {{border:'1px solid lightgrey', padding:'5px', borderRadius:'5%'}}>
                     <CardElement options={CARD_ELEMENT_OPTIONS} /></div>
-                    {/* <Button variant = "success" size = "lg"
+                    <Button variant = "success" size = "lg"
                         disabled = {!stripe || !valid()}
                         style = {{marginTop: '12px'}}
                         type = "submit"
-                    >Confirm Order</Button> */}
-                    <Alert variant = "danger" style = {{marginTop:'15px'}}><strong>Development still in progress.</strong><br/>
+                    >Confirm Order</Button>
+                    {/* <Alert variant = "danger" style = {{marginTop:'15px'}}><strong>Development still in progress.</strong><br/>
                       Please check back shortly for online ordering.<br/><strong>Call us for cash-on-delivery orders.<br/>Thank You</strong>
                     </Alert>
                     <Button variant = "success" size = "lg"
                         disabled
                         style = {{marginTop: '12px'}}
                         type = "submit"
-                    >Confirm Order</Button><br/>
+                    >Confirm Order</Button><br/> */}
                     {loading && <Alert variant = "primary">Loading....</Alert>}
                     {error && <Alert variant = "danger" style = {{marginTop:'10px'}}><h3>{error}</h3>Please check your card details and form inputs. <br/>You might need to reload the page after multiple attempts.</Alert>}
                 </Form>
