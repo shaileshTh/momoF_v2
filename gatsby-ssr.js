@@ -5,3 +5,13 @@
  */
 
 // You can delete this file if you're not using it
+import 'bootstrap/dist/css/bootstrap.min.css';
+import React from 'react'
+import CartContextProvider from './src/context/CartContext'
+
+export const wrapRootElement = ({element}) => (
+    <CartContextProvider>
+        {element}
+    </CartContextProvider>
+
+)
