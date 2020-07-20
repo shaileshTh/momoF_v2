@@ -239,6 +239,7 @@ export default () => {
                     <h2 style = {{color:'green', textAlign:'center'}}>Your order was successful!</h2>
                     <h3 style = {{textAlign:'center'}}><i>{displayName}</i></h3>
                     <h4 style = {{textAlign:'center'}}>Delivery Address: <i>{displayAddress}</i></h4>
+                    <p style = {{textAlign:'center'}}>You will be updated about your order with text messages.</p>
                     <p style = {{textAlign:'center'}}>We will start delivering as soon as we get your momos ready. Call us with any questions.</p>
                     <p style = {{textAlign:'center'}}> +1 470-455-2434 </p>
                     <p style = {{textAlign:'center'}}>MomoATL, 2600 Bentley RD SE</p>
