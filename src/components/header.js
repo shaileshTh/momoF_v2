@@ -7,12 +7,15 @@ import {CartContext} from '../context/CartContext'
 const Header = () => {
 
   const {cart} = useContext(CartContext)
-  console.log("header", cart)
+  // console.log("header", cart)
   return(
     <header
     style={{
       background: `#212529`,
       marginBottom: `1.45rem`,
+      position:'fixed',
+      zIndex:'100',
+      width:'100%',
     }}
   >
     <div

@@ -2,6 +2,9 @@
 //price in cents into price in dollars
 
 export const formatPrice = (priceInCents) => {
+    if(!priceInCents){
+        return "$0"
+    }
     const priceInDollars = parseInt(priceInCents) / 100
     return priceInDollars.toLocaleString('en-US', {
         style: 'currency',

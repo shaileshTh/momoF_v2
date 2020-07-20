@@ -26,6 +26,9 @@ export const cartSubtotal = (cart) => {
 }
 
 export const cartTotal = (cart) => {
+    if(cart.length === 0){
+        return 0
+    }
     const subTotal = cartSubtotal(cart)
     const total = subTotal + subTotal * TAX_RATE;
     return Math.round(total);
