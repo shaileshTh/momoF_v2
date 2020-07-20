@@ -94,7 +94,7 @@ export default () => {
         }
 
 
-        axios.post('https://momo-atl-strapi.herokuapp.com//orders', data)
+        axios.post('https://momo-atl-strapi.herokuapp.com/orders', data)
           .then(function (response) {
             setLoading(false)
             setDisplayId(response.data.payment_intent_id)
@@ -114,7 +114,7 @@ export default () => {
     useEffect(()=>{
         const loadToken = async () => {
             setLoading(true)
-            const response = await fetch('https://momo-atl-strapi.herokuapp.com//orders/payment',{
+            const response = await fetch('https://momo-atl-strapi.herokuapp.com/orders/payment',{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
