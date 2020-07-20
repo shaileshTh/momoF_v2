@@ -139,7 +139,7 @@ export default () => {
         <div
             style = {{margin: '24px  0'}} className = "text-center"
             >
-                {!loading && !success && <Alert variant = "primary">Please enter your information below.</Alert>}
+                {!loading && !success && cart && <Alert variant = "primary">Please enter your information below.</Alert>}
                 {loading && <h3>Loading...</h3>}
 
                 {!success && cart && cart.length > 0 &&
@@ -221,8 +221,16 @@ export default () => {
 
                     <div style = {{border:'1px solid lightgrey', padding:'5px', borderRadius:'5%'}}>
                     <CardElement options={CARD_ELEMENT_OPTIONS} /></div>
-                    <Button variant = "success" size = "lg"
+                    {/* <Button variant = "success" size = "lg"
                         disabled = {!stripe || !valid()}
+                        style = {{marginTop: '12px'}}
+                        type = "submit"
+                    >Confirm Order</Button> */}
+                    <Alert variant = "danger"><strong>Development still in progress.</strong><br/>
+                      Please check back shortly for online ordering.<br/><strong>Call-in orders accepted. <br/>Thank You</strong>
+                    </Alert>
+                    <Button variant = "success" size = "lg"
+                        disabled
                         style = {{marginTop: '12px'}}
                         type = "submit"
                     >Confirm Order</Button><br/>
