@@ -139,7 +139,7 @@ export default () => {
         <div
             style = {{margin: '24px  0'}} className = "text-center"
             >
-                {!loading && !success && cart && <Alert variant = "primary">Please enter your information below.</Alert>}
+                {!loading && !success && cart.length > 0 && <Alert variant = "primary">Please enter your information below.</Alert>}
                 {loading && <h3>Loading...</h3>}
 
                 {!success && cart && cart.length > 0 &&
