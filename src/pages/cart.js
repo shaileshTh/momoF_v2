@@ -19,7 +19,6 @@ export default () => {
 
     const [, updateState] = useState()
     const forceUpdate = useCallback(() => updateState({}), [])
-    console.log(process.env.API_URL)
     const [showCheckout, setShowCheckout] = useState(false)
     return(
         <Layout>
