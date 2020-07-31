@@ -24,7 +24,7 @@ const IndexPage = ({data}) => (
         </Card.Body>
       </Card> */}
 
-
+      {console.log(data)}
       {data.allStrapiDish.nodes.map(dish => (
         <NewCard dish = {dish} key = {dish.id}/>
       ))}
