@@ -37,7 +37,7 @@ const NewCard = ({dish}) => {
 
         <Card style={{ maxWidth: '500px', margin:'70px auto 0 auto', borderBottom:'none', borderRight:'none', borderLeft:'none'}}>
             <Card.Header as="h3" className= "text-center">{dish.strapiId}.{' '}{dish.title}<br/><small>{dish.description}</small></Card.Header>
-            <Card.Img variant="top" src={`${API_URL}${dish.image[0].url}`} style = {{marginBottom: '0'}}/>
+            <Card.Img variant="top" src={`${dish.image[0].url}`} style = {{marginBottom: '0'}}/>
             <Card.Body style = {{backgroundImage:'linear-gradient(lightgrey, lightgrey, lightgrey, white)'}}>
             <ListGroup variant="flush" className = "text-center">
             
