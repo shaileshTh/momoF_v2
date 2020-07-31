@@ -1,6 +1,6 @@
 import React, {createContext, useState} from 'react'
 import {getCart, saveCart} from '../utils/cart'
-import cart from '../pages/cart'
+// import cart from '../pages/cart'
 
 export const CartContext = createContext(null)
 

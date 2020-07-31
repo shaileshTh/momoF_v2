@@ -3,20 +3,18 @@ import React from "react"
 import Emoji from '../components/Emoji'
 import { graphql } from 'gatsby'
 import Layout from "../components/layout"
-import Card from 'react-bootstrap/Card'
+// import Card from 'react-bootstrap/Card'
 // import ListGroup from 'react-bootstrap/ListGroup'
 // import Button from 'react-bootstrap/Button'
-import DishCard from '../components/DishCard'
+// import DishCard from '../components/DishCard'
 import SEO from "../components/seo"
-import momo from '../../src/images/plate.jpg'
-
-
+import NewCard from '../components/NewCard'
 
 const IndexPage = ({data}) => (
     <Layout>
       <SEO title="Free Momo Delivery in and around Atlanta and Marietta, Georgia" />
       {/* {console.log(data)} */}
-      <Card style={{ maxWidth: '500px', margin:'70px auto 0 auto', borderBottom:'none', borderRight:'none', borderLeft:'none'}}>
+      {/* <Card style={{ maxWidth: '500px', margin:'70px auto 0 auto', borderBottom:'none', borderRight:'none', borderLeft:'none'}}>
       <Card.Header as="h3" className= "text-center">Steamed Momo<br/><small>served with Tomato Sesame Sauce</small></Card.Header>
         <Card.Img variant="top" src={momo} style = {{marginBottom: '0'}}/>
         <Card.Body style = {{backgroundImage:'linear-gradient(lightgrey, lightgrey, lightgrey, white)'}}>
@@ -24,7 +22,13 @@ const IndexPage = ({data}) => (
             <DishCard dish = {dish} key = {dish.id}/>
           ))}
         </Card.Body>
-      </Card>
+      </Card> */}
+
+
+      {data.allStrapiDish.nodes.map(dish => (
+        <NewCard dish = {dish} key = {dish.id}/>
+      ))}
+
       <div style = {{position:'relative', maxWidth:'500px', margin:'0 auto'}}>
         <img src = "https://goseveth.sirv.com/momo-01.png" alt="momoATL" style={{marginBottom: '0', width:"100%"}}/>
         <h3 style = {{textAlign:'center', width: '100%', position:'absolute', bottom:'0',textShadow: '2px 2px 4px white'}}>Free Delivery in and around Atlanta and Marietta, GA</h3>
@@ -51,6 +55,9 @@ export const pageQuery = graphql`
         title
         description
         price_in_cents
+        image {
+          url
+        }
       }
     }
   }

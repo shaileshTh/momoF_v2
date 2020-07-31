@@ -1,12 +1,12 @@
 import React, {useEffect, useState, useContext} from 'react'
 import axios from 'axios'
 import {useStripe, useElements, CardElement} from '@stripe/react-stripe-js'
-import {formatPrice} from '../utils/format'
+// import {formatPrice} from '../utils/format'
 import { CartContext } from '../context/CartContext';
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Alert from 'react-bootstrap/Alert'
-// import {API_URL} from '../utils/url'
+import {API_URL} from '../utils/url'
 
 const CARD_ELEMENT_OPTIONS = {
     style: {
@@ -50,11 +50,12 @@ export default () => {
 
 
     const [token, setToken] = useState(null)
-    const [total, setTotal] = useState('loading')
+    const [total, setTotal] = useState('')
     const [loading, setLoading] = useState(false)
     const [success, setSuccess] = useState(null)
 
     let payment_intent_id;
+
 
     const valid = () => {
         if(!customer_name || !delivery_address || !delivery_zip || !phone_number){
@@ -94,7 +95,7 @@ export default () => {
         }
 
 
-        axios.post('https://momo-atl-strapi.herokuapp.com/orders', data)
+        axios.post(`${API_URL}/orders`, data)
           .then(function (response) {
             setLoading(false)
             setDisplayId(response.data.payment_intent_id)
@@ -114,7 +115,7 @@ export default () => {
     useEffect(()=>{
         const loadToken = async () => {
             setLoading(true)
-            const response = await fetch('https://momo-atl-strapi.herokuapp.com/orders/payment',{
+            const response = await fetch(`${API_URL}/orders/payment`,{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
