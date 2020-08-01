@@ -13,8 +13,8 @@ import NewCard from '../components/NewCard'
 const IndexPage = ({data}) => (
     <Layout>
       <SEO title="Free Momo Delivery in and around Atlanta and Marietta, Georgia" />
-
-      <Card style={{ maxWidth: '500px', margin:'70px auto 0 auto', borderBottom:'none', borderRight:'none', borderLeft:'none'}}>
+      {/* {console.log(data)} */}
+      {/* <Card style={{ maxWidth: '500px', margin:'70px auto 0 auto', borderBottom:'none', borderRight:'none', borderLeft:'none'}}>
       <Card.Header as="h3" className= "text-center">Steamed Momo<br/><small>served with Tomato Sesame Sauce</small></Card.Header>
         <Card.Img variant="top" src={momo} style = {{marginBottom: '0'}}/>
         <Card.Body style = {{backgroundImage:'linear-gradient(lightgrey, lightgrey, lightgrey, white)'}}>
@@ -22,7 +22,8 @@ const IndexPage = ({data}) => (
             <DishCard dish = {dish} key = {dish.id}/>
           ))}
         </Card.Body>
-      </Card>
+      </Card> */}
+
 
       {data.allStrapiDish.nodes.map(dish => (
         <NewCard dish = {dish} key = {dish.id}/>
