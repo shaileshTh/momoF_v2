@@ -35,7 +35,7 @@ const Header = () => {
         >
         <Emoji symbol="🥟" label="dumpling"/>
         <span  style = {{fontSize:'25px'}}>
-        momoATL
+        WEBSITE UNDER MAINTAINANCE. PLEASE CALL FOR ORDERS
         </span></Link>
         <Link
           to="/cart"
@@ -45,7 +45,7 @@ const Header = () => {
             float:'right'
           }}
         >
-        <span  style = {{fontSize:'25px'}}>Cart{' '}</span><Emoji symbol="🛒" label="cart"/>
+        {/* <span  style = {{fontSize:'25px'}}>Cart{' '}</span><Emoji symbol="🛒" label="cart"/>
         {cart &&
           <span style = {{marginLeft:'-10px', background:'white', color:'#212529', borderRadius:'50%', height:'28px', width:'28px', fontSize:'20px', display:'inline-block', textAlign:'center', verticalAlign:'middle'}}>
             {' '}
@@ -53,7 +53,7 @@ const Header = () => {
               return counter + dish.quantity
             }, 0)}
             {' '}
-            </span>
+            </span> */}
         }
         </Link>
       </h2>
