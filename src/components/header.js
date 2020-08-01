@@ -54,7 +54,6 @@ const Header = () => {
             }, 0)}
             {' '}
             </span> */}
-        }
         </Link>
       </h2>
     </div>
