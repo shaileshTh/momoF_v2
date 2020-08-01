@@ -25,9 +25,9 @@ const IndexPage = ({data}) => (
       </Card> */}
 
       {/* {console.log(data)} */}
-      {data.allStrapiDish.nodes.map(dish => (
+      {/* {data.allStrapiDish.nodes.map(dish => (
         <NewCard dish = {dish} key = {dish.id}/>
-      ))}
+      ))} */}
 
       <div style = {{position:'relative', maxWidth:'500px', margin:'0 auto'}}>
         <img src = "https://goseveth.sirv.com/momo-01.png" alt="momoATL" style={{marginBottom: '0', width:"100%"}}/>
@@ -46,19 +46,19 @@ const IndexPage = ({data}) => (
 
 export default IndexPage
 
-export const pageQuery = graphql`
-  query MyQuery {
-    allStrapiDish {
-      nodes {
-        id
-        strapiId
-        title
-        description
-        price_in_cents
-        image {
-          url
-        }
-      }
-    }
-  }
-`
+// export const pageQuery = graphql`
+//   query MyQuery {
+//     allStrapiDish {
+//       nodes {
+//         id
+//         strapiId
+//         title
+//         description
+//         price_in_cents
+//         image {
+//           url
+//         }
+//       }
+//     }
+//   }
+// `
