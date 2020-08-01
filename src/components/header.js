@@ -3,10 +3,10 @@ import { Link } from "gatsby"
 import Emoji from '../components/Emoji'
 import PropTypes from "prop-types"
 import {CartContext} from '../context/CartContext'
-
 const Header = () => {
 
   const {cart} = useContext(CartContext)
+  console.log("header", cart)
   // console.log("header", cart)
   return(
     <header
@@ -54,20 +54,17 @@ const Header = () => {
             }, 0)}
             {' '}
             </span>
+        }
         </Link>
       </h2>
     </div>
   </header>
   )
 }   
-
-
 Header.propTypes = {
   siteTitle: PropTypes.string,
 }
-
 Header.defaultProps = {
   siteTitle: ``,
 }
-
 export default Header

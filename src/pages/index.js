@@ -13,7 +13,7 @@ import NewCard from '../components/NewCard'
 const IndexPage = ({data}) => (
     <Layout>
       <SEO title="Free Momo Delivery in and around Atlanta and Marietta, Georgia" />
-      {console.log(data)} */}
+
       <Card style={{ maxWidth: '500px', margin:'70px auto 0 auto', borderBottom:'none', borderRight:'none', borderLeft:'none'}}>
       <Card.Header as="h3" className= "text-center">Steamed Momo<br/><small>served with Tomato Sesame Sauce</small></Card.Header>
         <Card.Img variant="top" src={momo} style = {{marginBottom: '0'}}/>
