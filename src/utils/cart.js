@@ -1,4 +1,4 @@
-export const TAX_RATE = 0.08;
+export const TAX_RATE = 0.10;
 
 export const saveCart = (cart) => {
     localStorage.setItem('cart', JSON.stringify(cart))

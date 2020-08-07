@@ -68,7 +68,7 @@ export default () => {
  
             <Alert variant = "info" className = "text-center">
             <h4 style = {{marginBottom:'.5em'}}>Subtotal: {formatPrice(cartSubtotal(cart))}</h4>
-            <h4 style = {{marginBottom:'.5em'}}>8% Tax: {formatPrice(tax(cart))}</h4>
+            <h4 style = {{marginBottom:'.5em'}}>Service Charge (10%): {formatPrice(tax(cart))}</h4>
             <h3>Total: {formatPrice(cartTotal(cart))}</h3>
             </Alert>
             </>
