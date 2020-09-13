@@ -31,7 +31,7 @@ const IndexPage = ({data}) => (
 
       <div style = {{position:'relative', maxWidth:'500px', margin:'0 auto'}}>
         <img src = "https://goseveth.sirv.com/momo-01.png" alt="momoATL" style={{marginBottom: '0', width:"100%"}}/>
-        <h3 style = {{textAlign:'center', width: '100%', position:'absolute', bottom:'0',textShadow: '2px 2px 4px white'}}>Free Delivery in and around Atlanta and Marietta, GA</h3>
+        <h3 style = {{textAlign:'center', width: '100%', position:'absolute', bottom:'0',textShadow: '2px 2px 4px white'}}>Authentic Nepali Dumplings Delivered.</h3>
       </div>
       <div style = {{position:'relative', minHeight: '150px', maxWidth:'500px', margin:'0 auto', backgroundImage:'linear-gradient(white, lightgrey)'}}>
             <p style = {{textAlign:'center', width:'100%', bottom:'-10px', position:'absolute'}}><strong>momoATL</strong>
