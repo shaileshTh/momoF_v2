@@ -3,6 +3,7 @@ import React from "react"
 import Emoji from '../components/Emoji'
 import { graphql } from 'gatsby'
 import Layout from "../components/layout"
+import Alert from 'react-bootstrap/Alert'
 // import Card from 'react-bootstrap/Card'
 // import ListGroup from 'react-bootstrap/ListGroup'
 // import Button from 'react-bootstrap/Button'
@@ -23,6 +24,12 @@ const IndexPage = ({data}) => (
           ))}
         </Card.Body>
       </Card> */}
+      <Alert variant="danger"  style = {{marginTop:'100px', fontWeight:'bold'}}>
+  <Alert.Heading>No Online Orders</Alert.Heading>
+  <p>
+    <h2>We are not taking any delivery orders currently. Sorry for any inconvenience.</h2> 
+  </p>
+</Alert>
 
 
       {data.allStrapiDish.nodes.map(dish => (
